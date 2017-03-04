@@ -105,6 +105,15 @@ void reverse(Node **head){
 int main(int argc, char * agrv[]){
 	Node * head=NULL;
 	int data[]={2,4,1,6,7};
+	std::map<int,std::string> operations;
+	operations[1]="insert_at_begining";
+	operations[2]="insert_at_position";
+	operations[3]="delete_at_positon";
+	operations[4]="sorting";
+	operations[5]="reverse print";
+	operations[6]="reverse";
+	operations[7]="print";
+	operations[10]="Exit";
 	for (int i=0;i<5;i++){
 		int num=data[i];
 		Node * newnode= new Node();
@@ -120,15 +129,7 @@ int main(int argc, char * agrv[]){
 		std::cout<< std::setfill('-')<<std::setw(33) <<"-"<<std::endl;
 		std::cout <<std::setfill(' ')<< '|' << std::setw(10) << std::left <<"Option" << '|' <<std::setw(20) << "operation" << '|' << std::endl;
 		std::cout<< std::setfill('-')<<std::setw(33) <<"-"<<std::setfill(' ')<<std::endl;
-		std::map<int,std::string> operations;
-		operations[1]="insert_at_begining";
-		operations[2]="insert_at_position";
-		operations[3]="delete_at_positon";
-		operations[4]="sorting";
-		operations[5]="reverse print";
-		operations[6]="reverse";
-		operations[7]="print";
-		operations[10]="Exit";
+
 		for (map<int,string>::iterator it=operations.begin();it!=operations.end();++it){
 			std::cout <<std::setfill(' ')<< '|' << std::setw(10) << std::left <<it->first<< '|' <<std::setw(20) << it->second << '|' << std::endl;
 		}
